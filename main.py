@@ -2,7 +2,7 @@
 Entry point into Flask app
 """
 
-from celebi.core.flask.config import AppConfig
+from celebi.core.config import AppConfig
 from celebi.core.flask.factory import create_flask_app
 
 

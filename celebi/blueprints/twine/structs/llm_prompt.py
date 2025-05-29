@@ -4,7 +4,7 @@ A class to prompt the OpenAI REST API
 
 from openai import OpenAI
 
-from celebi.core.flask.config import AppConfig
+from celebi.core.config import AppConfig
 from .prompt_response_pair import PromptResponsePair
 
 
