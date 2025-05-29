@@ -19,4 +19,4 @@ def get_root_page() -> Response:
     Template route
     """
 
-    return make_json_response("Hello world!", HTTPStatus.OK)
+    return make_json_response("Hello world! v1.1-20252905a", HTTPStatus.OK)
