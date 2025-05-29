@@ -8,7 +8,7 @@ from http import HTTPStatus
 from flask import Blueprint, request, Response
 from flask_cors import cross_origin
 
-from celebi.core.flask.config import AppConfig
+from celebi.core.config import AppConfig
 from celebi.core.util import make_json_response
 from celebi.core.util import get_body_field
 from celebi.core.exceptions import RequestValueError
@@ -18,11 +18,13 @@ bp = Blueprint("wildcat", __name__)
 
 
 @bp.route("/subscribe", methods=["POST", "OPTIONS"])
-@cross_origin(origins="*")
+@cross_origin(origins="https://wildhacks.net")
 def subscribe_new_email() -> Response:
     """
     Subscribes a new user to the Wildhacks email list
     """
+
+    return make_json_response("WildHacks 2025 is over. Please subscribe to the mailing list for WildHacks 2026.", HTTPStatus.BAD_REQUEST)
 
     request_body = request.get_json()
     if not request_body:

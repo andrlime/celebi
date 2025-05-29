@@ -17,7 +17,7 @@ bp = Blueprint("twine", __name__)
 
 
 @bp.route("/prompt", methods=["POST"])
-@cross_origin()
+@cross_origin(origins="https://twine.andrewli.org")
 def prompt() -> Response:
     """
     Generates a prompt for Twine game. Takes the current game state and
