@@ -26,4 +26,4 @@ COPY --from=deps /app/. .
 COPY . .
 
 EXPOSE 9000:9000
-CMD ["poetry", "run", "waitress-serve", "--port=9000", "--call", "rabbit.core.flask.factory:create_flask_app"]
+CMD ["poetry", "run", "waitress-serve", "--port=9000", "--call", "celebi.core.flask.factory:create_flask_app"]
