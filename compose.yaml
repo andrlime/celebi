@@ -3,13 +3,13 @@ services:
     image: andrewli2048/celebi-api
     build:
       context: .
-      dockerfile: docker/DevDockerfile
-      # dockerfile: docker/ProdDockerfile
+      dockerfile: docker/Dockerfile
+      target: ${BUILD_TARGET:-dev}
     develop:
       watch:
         - action: sync
-          path: ./celebi
-          target: /celebi/celebi
+          path: ./
+          target: /app/
         - action: rebuild
           path: ./pyproject.toml
     ports:
