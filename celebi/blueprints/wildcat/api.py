@@ -2,7 +2,6 @@
 API routes for parser blueprint
 """
 
-
 from http import HTTPStatus
 from flask import Blueprint, Response
 from flask_cors import cross_origin
