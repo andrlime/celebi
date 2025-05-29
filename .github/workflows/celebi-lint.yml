@@ -2,15 +2,9 @@ name: "[celebi/lint] Run pylint, black, mypy, and ruff"
 
 on:
   push:
-    branches: ["main", "celebi*"]
-    paths:
-      - "./**"
-      - ".github/workflows/celebi-lint.yml"
+    branches: ["*"]
   pull_request:
     branches: ["*"]
-    paths:
-      - "./**"
-      - ".github/workflows/celebi-lint.yml"
 
 permissions:
   contents: read
