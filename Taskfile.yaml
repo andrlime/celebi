@@ -33,7 +33,7 @@ tasks:
       - docker run --rm -p 9000:9000 --name celebi-api andrewli2048/celebi-api
   build-prod:
     cmds:
-      - docker build -t andrewli2048/celebi-api -f docker/ProdDockerfile .
+      - docker build -t andrewli2048/celebi-api -f docker/Dockerfile .
       - docker push andrewli2048/celebi-api
   run-prod:
     cmds:
